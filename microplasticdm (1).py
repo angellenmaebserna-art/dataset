@@ -23,6 +23,11 @@ Original file is located at
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+os.environ['PROPHET_BACKEND'] = 'CMDSTANPY'
+from prophet import Prophet
+import cmdstanpy
+cmdstanpy.install_cmdstan()
 
 # Load dataset first
 df = pd.read_csv('merged_microplastic_data.csv')
