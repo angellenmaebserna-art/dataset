@@ -21,9 +21,11 @@ Original file is located at
 *   Explore alternative time series models (e.g., Prophet, Exponential Smoothing) and compare their forecasting performance.
 """
 
-import matplotlib.pyplot as plt
 import pandas as pd
+import matplotlib.pyplot as plt
 
+# Load dataset first
+df = pd.read_csv('merged_microplastic_data.csv')
 # Ensure necessary dataFrames are available
 if 'yearly_microplastic' not in locals():
     # Assuming df is available, aggregate yearly data
